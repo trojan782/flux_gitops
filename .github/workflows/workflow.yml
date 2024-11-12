@@ -39,6 +39,6 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/go-api:latest .
-
+        working-directory: ./go-api
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/go-api:latest
